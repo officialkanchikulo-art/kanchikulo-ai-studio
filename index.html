@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131c">
+  <meta name="description" content="Create promotional image concepts for your business with Kanchikulo AI Studio.">
+  <title>Kanchikulo AI Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Kanchikulo AI Studio home">
+      <span class="brand-mark">K</span>
+      <span>Kanchikulo <b>AI Studio</b></span>
+    </a>
+    <span class="top-note">CREATIVE TOOLS FOR SMALL BUSINESSES</span>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <p class="eyebrow">YOUR IDEAS, VISUALLY</p>
+      <h1>Make your next<br><span>great image.</span></h1>
+      <p class="intro-copy">Describe the image you need. Shape the look. Create visuals for your business, brand or next big idea.</p>
+    </section>
+
+    <section class="studio" aria-labelledby="studio-title">
+      <div class="panel controls">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">IMAGE WORKSPACE</p>
+            <h2 id="studio-title">Create an image</h2>
+          </div>
+          <span class="step-tag">01 / PROMPT</span>
+        </div>
+
+        <form id="image-form">
+          <label for="prompt">What do you want to create?</label>
+          <textarea id="prompt" rows="5" maxlength="600" placeholder="Example: A beautiful modern African bakery at sunrise, a friendly owner opening the shop, warm natural light, professional advertising photography..." required></textarea>
+          <div class="field-foot"><span>Be specific about the subject, setting and mood.</span><span id="char-count">0 / 600</span></div>
+
+          <div class="field-grid">
+            <div>
+              <label for="style">Visual style</label>
+              <select id="style">
+                <option value="Photorealistic">Photorealistic</option>
+                <option value="3D illustration">3D illustration</option>
+                <option value="Cartoon">Cartoon</option>
+                <option value="Minimalist graphic design">Minimalist</option>
+                <option value="Product photography">Product photography</option>
+                <option value="Cinematic">Cinematic</option>
+              </select>
+            </div>
+            <div>
+              <label for="ratio">Image shape</label>
+              <select id="ratio">
+                <option value="1:1">Square (1:1)</option>
+                <option value="4:5">Portrait (4:5)</option>
+                <option value="9:16">Story / Reel (9:16)</option>
+                <option value="16:9">Landscape (16:9)</option>
+              </select>
+            </div>
+          </div>
+
+          <label>Quick ideas</label>
+          <div class="chips" id="prompt-chips">
+            <button type="button" class="chip" data-prompt="A clean promotional image for a local fashion shop, elegant clothing display, welcoming atmosphere, professional commercial photography">Fashion shop</button>
+            <button type="button" class="chip" data-prompt="A fresh product advertisement for a small bakery, beautifully arranged bread and pastries, warm morning light, professional food photography">Bakery advert</button>
+            <button type="button" class="chip" data-prompt="A confident African entrepreneur standing inside a modern small business, natural expression, bright welcoming workspace, editorial photography">Business owner</button>
+          </div>
+
+          <button class="primary-button" type="submit">Prepare my image prompt <span aria-hidden="true">→</span></button>
+          <p class="small-note">Stage 1 preview: this starter prepares your prompt. Real AI image generation will be connected through a secure server in Stage 2.</p>
+        </form>
+      </div>
+
+      <aside class="panel preview">
+        <div class="preview-head">
+          <div><p class="eyebrow">YOUR CANVAS</p><h2>Preview</h2></div>
+          <span class="status"><i></i> DEMO MODE</span>
+        </div>
+        <div class="canvas" id="canvas">
+          <div class="canvas-art" aria-hidden="true">
+            <div class="sun"></div><div class="hill hill-one"></div><div class="hill hill-two"></div>
+            <div class="shop"><div class="awning"></div><div class="shop-window"></div><div class="shop-door"></div></div>
+          </div>
+          <div class="canvas-message" id="canvas-message">
+            <span class="sparkle">✦</span>
+            <h3>Your next idea starts here.</h3>
+            <p>Your image preview will appear here after we connect an image-generation service.</p>
+          </div>
+        </div>
+        <div class="result" id="result" hidden>
+          <div class="result-title">Prepared prompt <span class="ready">READY</span></div>
+          <p id="prepared-prompt"></p>
+          <button type="button" class="secondary-button" id="copy-button">Copy prepared prompt</button>
+        </div>
+        <div class="preview-footer"><span>Made for creators and small businesses</span><span>✦ Kanchikulo</span></div>
+      </aside>
+    </section>
+
+    <section class="bottom-note">
+      <span class="lock">▣</span>
+      <p><b>Your work stays yours.</b> We will keep API keys on the server, never inside public website code.</p>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> Kanchikulo AI Studio. Built one step at a time.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
