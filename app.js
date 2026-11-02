@@ -128,4 +128,3 @@ copyButton.addEventListener("click", async () => {
     copyButton.textContent = "Copy unavailable in this browser";
   }
 });
-
